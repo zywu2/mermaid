@@ -717,8 +717,9 @@ export const draw = async function (text, id, _version, diagObj) {
       'elk.hierarchyHandling': 'INCLUDE_CHILDREN',
       'org.eclipse.elk.padding': '[top=100, left=100, bottom=110, right=110]',
       'elk.layered.spacing.edgeNodeBetweenLayers': '30',
-      // 'elk.layered.mergeEdges': 'true',
+      'elk.layered.mergeEdges': 'true',
       'elk.direction': 'DOWN',
+      ...(getConfig().flowchart.layoutOptions || {})
       // 'elk.ports.sameLayerEdges': true,
       // 'nodePlacement.strategy': 'SIMPLE',
     },
@@ -875,8 +876,7 @@ const drawNodes = (relX, relY, nodeArray, svg, subgraphsEl, diagObj, depth) => {
         const labelCentering = getConfig().flowchart.htmlLabels ? node.labelData.width / 2 : 0;
         label.attr(
           'transform',
-          `translate(${node.labels[0].x + relX + node.x + labelCentering}, ${
-            node.labels[0].y + relY + node.y + 3
+          `translate(${node.labels[0].x + relX + node.x + labelCentering}, ${node.labels[0].y + relY + node.y + 3
           })`
         );
         label.node().appendChild(node.labelData.labelNode);

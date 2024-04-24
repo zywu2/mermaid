@@ -1,14 +1,14 @@
 name: Lint
 
-on:
-  push:
-  merge_group:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - ready_for_review
-  workflow_dispatch:
+# on:
+#   push:
+#   merge_group:
+#   pull_request:
+#     types:
+#       - opened
+#       - synchronize
+#       - ready_for_review
+#   workflow_dispatch:
 
 permissions:
   contents: write

@@ -1,13 +1,13 @@
 name: Build
 
-on:
-  push: {}
-  merge_group:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - ready_for_review
+# on:
+#   push: {}
+#   merge_group:
+#   pull_request:
+#     types:
+#       - opened
+#       - synchronize
+#       - ready_for_review
 
 permissions:
   contents: read

@@ -37,8 +37,7 @@ jobs:
 
       - name: Publish
         run: |
-          cd packages/mermaid/dist
-          npm set //registry.npmjs.org/:_authToken $NPM_TOKEN
+s         npm set //registry.npmjs.org/:_authToken $NPM_TOKEN
           npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
